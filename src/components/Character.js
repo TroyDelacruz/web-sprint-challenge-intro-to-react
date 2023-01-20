@@ -25,3 +25,37 @@ const StyledCharacterDiv = styled.div`
     }
 
 ;`
+
+const Character = (props) => {
+    function film (title) {
+        return (
+            <li>{title}</li>
+        )
+    }
+
+    const { currentCharacter } = props;
+    return (
+        <StyledCharacterDiv>
+            <div className="constants">
+                <h1>Name: </h1>
+                <h3>Birth year: </h3>
+                <h3>Gender: </h3>
+                <h3>Eye Color: </h3>
+                <h3>Height: </h3>
+                <h3>Mass: </h3>
+                <h3>Hair Color: </h3>
+            </div>
+            <div className="data">
+                <h1>{currentCharacter.name}</h1>
+                <h3>{currentCharacter.birth_year}</h3>
+                <h3>{currentCharacter.gender}</h3>
+                <h3>{currentCharacter.eye_color}</h3>
+                <h3>{currentCharacter.height}</h3>
+                <h3>{currentCharacter.mass}</h3>
+                <h3>{currentCharacter.hair_color}</h3>
+            </div>
+        </StyledCharacterDiv>
+    )
+}
+
+export default Character;
